@@ -7,8 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>  
   <link rel="stylesheet" href="css/index.css">
 
   <style>
@@ -22,12 +21,13 @@
     .nav-item:hover { background: #1947ee; }
     .account-link:hover { background: #3d68ff; }
   </style>
+
   <title>Lap Gerencial Web</title>
 </head>
 <body class="bg-gray-100 font-family-karla flex">
   <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
     <div class="p-6">
-        <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Lap Gerencial</a>
+        <a href="index.html" class="text-white font-normal text-2xl font-semibold uppercase hover:text-gray-300">Lap Gerencial</a>
         <button class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
             <i data-feather="log-in" class="mr-3 text-blue-400"></i> Entrar
         </button>
@@ -35,135 +35,130 @@
 
     <nav class="text-white text-base font-semibold pt-3">
         <a href="index.html" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
-            <i data-feather="activity" class="mr-3"></i>
-            Dashboard
+            <i data-feather="activity" class="mr-3"></i>Dashboard
         </a>
         <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-            <i data-feather="dollar-sign" class="mr-3"></i>
-            Faturamento
+            <i data-feather="dollar-sign" class="mr-3"></i>Faturamento
         </a>
         <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-            <i data-feather="plus" class="mr-3"></i>
-            Nova Página
+            <i data-feather="plus" class="mr-3"></i>Nova Página
         </a>
         <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-            <i data-feather="plus" class="mr-3"></i>
-            Nova Página
+            <i data-feather="plus" class="mr-3"></i>Nova Página
         </a>
         <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
-            <i data-feather="plus" class="mr-3"></i>
-            Nova Página
+            <i data-feather="plus" class="mr-3"></i>Nova Página
         </a>
     </nav>
     <a href="contato.html" class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
-        <i data-feather="help-circle" class="mr-3"></i>
-        Contate-nos
+        <i data-feather="help-circle" class="mr-3"></i>Contate-nos
     </a>
   </aside>
   
+  <!-- Container da página -->
   <div class="w-full flex flex-col h-screen overflow-y-hidden">
     <!-- Desktop Header -->
     <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex">
-      <div class="w-1/2"></div>
-      <div class="relative w-1/2 flex justify-end">
-          <button class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
-              <img src="https://avatars.githubusercontent.com/u/45977226?v=4">
-          </button>
-          <!-- <button class="h-full w-full fixed inset-0 cursor-default"></button> -->
-          <div class="absolute w-40 bg-white rounded-lg shadow-lg py-2 mt-16">
-              <a href="#" class="flex gap-x-2 block px-4 py-2 account-link hover:text-white"> <i class="w-4" data-feather="users" ></i>Conta</a>
-              <a href="#" class="flex gap-x-2 block px-4 py-2 account-link hover:text-white"> <i class="w-4" data-feather="help-circle"></i> Suporte</a>
-              <a href="#" class=" flex gap-x-2 block px-4 py-2 account-link hover:text-white"><i class="w-4" data-feather="log-out"></i>Sair</a>
-          </div>
-      </div>
-  </header>
-
-  <!-- Mobile Header & Nav -->
-  <header class="w-full bg-sidebar py-5 px-6 sm:hidden">
-      <div class="flex items-center justify-between">
-          <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Lap Gerencial</a>
-          <button class="text-white text-3xl focus:outline-none">
-              <!-- Quando estiver fechado -->
-              <i data-feather="menu" class="fas fa-bars"></i>
-              <!-- Quando estiver aberto -->
-              <i data-feather="x-circle" class="fas fa-times"></i> 
-          </button>
-      </div>
-
-      <!-- Dropdown Nav -->
-      <!-- Quando nao estiver aberto usar hidden  :class="isOpen ? 'flex': 'hidden'"  -->
-      <nav class="flex flex-col pt-4">
-          <a href="index.html" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
-              <i data-feather="activity" class="mr-3"></i>
-              Dashboard
-          </a>
-          <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="dollar-sign" class="mr-3"></i>
-              Faturamento
-          </a>
-          <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="plus" class="mr-3"></i>
-              Nova Página
-          </a>
-          <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="plus" class="mr-3"></i>
-              Nova Página
-          </a>
-          <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="plus" class="mr-3"></i>
-              Nova Página
-          </a>
-          <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="plus" class="mr-3"></i>
-              Nova Página
-          </a>
-          <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="user" class="mr-3"></i>
-              My Account
-          </a>
-          <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
-              <i data-feather="log-out" class="mr-3"></i>
-              Sign Out
-          </a>
-          <button class="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-              <i data-feather="help-circle" class="mr-3"></i> Contate-nos
-          </button>
-      </nav>
-  </header>
-
-  <div class="w-full overflow-x-hidden border-t flex flex-auto flex-col">
-    <main class="w-full flex-grow p-6">
-        <h1 class="text-3xl text-black pb-6">Dashboard</h1>
-
-        <div class="flex flex-wrap mt-6">
-            <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
-                <p class="text-xl pb-3 flex items-center" id="teste">
-                    <i class="fas fa-plus mr-3"></i> Monthly Reports
-                </p>
-                <div class="p-6 bg-white" id="chart-dunut">                    
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
-                <p class="text-xl pb-3 flex items-center">
-                    <i class="fas fa-check mr-3"></i> Resolved Reports
-                </p>
-                <div class="p-6 bg-white"  id="chart-bar">                    
-                </div>
+        <div class="w-1/2"></div>
+        <div class="relative w-1/2 flex justify-end">
+            <button onclick="openMenu()" class="realtive z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
+                <img src="https://avatars.githubusercontent.com/u/45977226?v=4">
+            </button>
+            <!-- <button class="h-full w-full fixed inset-0 cursor-default"></button> -->
+            <div id="menu-user" class="absolute w-40 bg-white rounded-lg shadow-lg py-2 mt-16 hidden">
+                <a href="#" class="flex gap-x-2 block px-4 py-2 account-link hover:text-white"> 
+                    <i class="w-4" data-feather="users" ></i>Conta
+                </a>
+                <a href="#" class="flex gap-x-2 block px-4 py-2 account-link hover:text-white"> 
+                    <i class="w-4" data-feather="help-circle"></i> Suporte
+                </a>
+                <a href="#" class=" flex gap-x-2 block px-4 py-2 account-link hover:text-white">
+                    <i class="w-4" data-feather="log-out"></i>Sair
+                </a>
             </div>
         </div>
-    </main>
+    </header>
 
-    <footer class="w-full bg-white text-right p-4 text-white">
-        Criado por <a target="_blank" href="https://www.lapinfo.com.br/" class="no-underline">Lap Informática</a>.
-    </footer>
-</div>
+  <!-- Mobile Header & Nav -->
+    <header class="w-full bg-sidebar py-5 px-6 sm:hidden">
+        <div class="flex items-center justify-between">
+            <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Lap Gerencial</a>
+            <button class="text-white text-3xl focus:outline-none">
+                <!-- Quando estiver fechado -->
+                <i data-feather="menu" class="fas fa-bars"></i>
+                <!-- Quando estiver aberto -->
+                <i data-feather="x-circle" class="fas fa-times"></i> 
+            </button>
+        </div>
 
+        <!-- Dropdown Nav -->
+        <!-- Quando nao estiver aberto usar hidden  :class="isOpen ? 'flex': 'hidden'"  -->
+        <nav class="flex flex-col pt-4">
+            <a href="index.html" class="flex items-center active-nav-link text-white py-2 pl-4 nav-item">
+                <i data-feather="activity" class="mr-3"></i>Dashboard
+            </a>
+            <a href="blank.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="dollar-sign" class="mr-3"></i>Faturamento
+            </a>
+            <a href="tables.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="plus" class="mr-3"></i>Nova Página
+            </a>
+            <a href="forms.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="plus" class="mr-3"></i>
+                Nova Página
+            </a>
+            <a href="tabs.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="plus" class="mr-3"></i>Nova Página
+            </a>
+            <a href="calendar.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="plus" class="mr-3"></i>Nova Página
+            </a>
+            <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="user" class="mr-3"></i>My Account
+            </a>
+            <a href="#" class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                <i data-feather="log-out" class="mr-3"></i>Sign Out
+            </a>
+            <button class="w-full bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                <a href="pages/contato.html" class="flex items-center text-blue-700 opacity-75 hover:opacity-100 py-2 pl-4 nav-item">
+                    <i data-feather="help-circle" class="mr-3"></i> Contate-nos
+                </a>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Conteudo central da pagina -->
+    <div class="w-full overflow-x-hidden border-t flex flex-auto flex-col">
+        <main class="w-full flex-grow p-6">
+            <h1 class="text-3xl text-black pb-6">Dashboard</h1>
+
+            <div class="flex flex-wrap mt-6">
+                <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
+                    <p class="text-xl pb-3 flex items-center" id="teste">
+                        <i class="fas fa-plus mr-3"></i> Monthly Reports
+                    </p>
+                    <div class="p-6 bg-white" id="chart-dunut">                    
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
+                    <p class="text-xl pb-3 flex items-center">
+                        <i class="fas fa-check mr-3"></i> Resolved Reports
+                    </p>
+                    <div class="p-6 bg-white"  id="chart-bar">                    
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w-full bg-slate-400 text-right p-4 font-bold text-white">
+            Desenvolvido por  <a target="_blank" href="https://www.lapinfo.com.br/" class="no-underline">Lap Informática</a>
+        </footer>
+    </div>
   </div>  
 </body>
 
-<script>
-  feather.replace()
-</script>
+<script>feather.replace()</script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="js/index.js"></script>
 
 </html>
