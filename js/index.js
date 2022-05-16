@@ -1,5 +1,5 @@
 let dvChartDunut = document.querySelector("#chart-dunut")
-let  optionsDunut = {
+let optionsDunut = {
   chart: {
     type: 'donut'
   },
@@ -21,20 +21,41 @@ let optionsBar = {
   },
   series: [{
     name: 'sales',
-    data: [30,40,45,50,49,60,70,91,125]
+    data: [30, 40, 45, 50, 49, 60, 70, 91, 125]
   }],
   xaxis: {
-    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+    categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
   }
 }
 let chart = new ApexCharts(dvChartBar, optionsBar);
 chart.render();
 
-let dvMenuUser = document.querySelector("#menu-user")
-const defaultClassElementMenu = "absolute w-40 bg-white rounded-lg shadow-lg py-2 mt-16"
+let dvMenuUserDesktop = document.querySelector("#menu-user-desktop")
+const defaultClassElementMenuDesktop = "absolute w-40 bg-white rounded-lg shadow-lg py-2 mt-16"
+const openMenuDesktop = () => {
+  let actualClassElementMenuDesktop = dvMenuUserDesktop.className
+  let newClassElementMenuDesktop = actualClassElementMenuDesktop.search("hidden") > 0 ? defaultClassElementMenuDesktop : actualClassElementMenuDesktop += " hidden"
+  dvMenuUserDesktop.className = newClassElementMenuDesktop
+}
 
-const openMenu = () => {
-  let actualClassElementMenu = dvMenuUser.className;
-  let newClassElementMenu = actualClassElementMenu.search("hidden") > 0 ? defaultClassElementMenu : actualClassElementMenu += " hidden"
-  dvMenuUser.className = newClassElementMenu 
+let dvMenuUserMobile = document.querySelector("#menu-user-mobile")
+const defaultClassElementMenuMobile = "flex flex-col pt-4"
+let dvMenuMobileMenu = document.querySelector("#dv-menu-mobile")
+let dvMenuMobileMenuClose = document.querySelector("#dv-menu-mobile-close")
+
+const openMenuMobile = () => {
+  let actualClassElementMenuMobile = dvMenuUserMobile.className
+  const situationHiddenMenuMobile = actualClassElementMenuMobile.search("hidden") > 0
+
+  if (situationHiddenMenuMobile) {
+    actualClassElementMenuMobile = defaultClassElementMenuMobile
+    dvMenuMobileMenu.className = "hidden"
+    dvMenuMobileMenuClose.className = ""
+  }
+  else {
+    actualClassElementMenuMobile = defaultClassElementMenuMobile + " hidden"
+    dvMenuMobileMenu.className = ""
+    dvMenuMobileMenuClose.className = "hidden"
+  }
+  dvMenuUserMobile.className = actualClassElementMenuMobile
 }
