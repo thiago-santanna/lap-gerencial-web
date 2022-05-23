@@ -38,7 +38,7 @@ const openMenuMobile = () => {
 // HelloW
 let dvBemVIndo = document.querySelector("#bem-vindo")
 function getHello(name) {
-  axios.get(`http://verticalautomotivo.ddns.net:8080/wslap/dwCGIServer.exe/helloworld?name=${name}`)
+  axios.get(`https://verticalautomotivo.ddns.net:443/wslap/dwCGIServer.exe/helloworld?name=${name}`)
     .then((response) => {
       dvBemVIndo.innerHTML = response.data
     })
@@ -50,7 +50,7 @@ function getHello(name) {
 //Empresas
 let selectEmpresa = document.querySelector("#empresas")
 function getEmpresas() {
-  axios.get(`http://verticalautomotivo.ddns.net:8080/wslap/dwCGIServer.exe/getCodEmpresa`)
+  axios.get(`https://verticalautomotivo.ddns.net:443/wslap/dwCGIServer.exe/getCodEmpresa`)
     .then((response) => {
       response.data.map(emp => {
         let opt = document.createElement('option')
@@ -93,7 +93,7 @@ function getConsultaFaturamento() {
   sqlFaturamento = sqlFaturamento.concat(`and osliquid <= '${dtFinal.value
     } 23:59:59' `)
 
-  axios.get(`http://verticalautomotivo.ddns.net:8080/wslap/dwCGIServer.exe/consulta?sql=${sqlFaturamento
+  axios.get(`https://verticalautomotivo.ddns.net:443/wslap/dwCGIServer.exe/consulta?sql=${sqlFaturamento
     }`)
     .then((response) => {
       resultado = response.data[0]
